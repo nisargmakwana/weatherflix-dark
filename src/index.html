@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html {
+            font-size: 62.5%;
+        }
+    </style>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>WeatherFlix</title>
+</head>
+
+<body class="bg-[#fffbd7] dark:bg-slate-600 text-slate-900 dark:text-white font-normal font-['Poppins']">
+    <div class="w-full md:max-w-[120rem] bg-white dark:bg-slate-950 max-h-fit mx-auto rounded-xl shadow-md">
+        <!-- CONTAINER -->
+        <div class="container mx-auto md:grid md:grid-cols-[1fr_3.5fr] px-[2.5rem] py-[3.5rem]">
+            <!-- LEFT COLUMN -->
+            <div class="flex flex-col items-center justify-center lg:items-start lg:justify-normal">
+                <!-- app name -->
+                <div class="flex gap-8 items-center justify-items-center mb-[2rem] mr-[1rem]">
+                    <h1 class="text-6xl font-semibold ">WeatherFlix</h1>
+                    <label for="toggle" class="bg-gray-100 cursor-pointer relative w-20 h-10 rounded-full ">
+                        <input type="checkbox" class="sr-only peer " id="toggle">
+                        <span
+                            class="w-2/5 h-4/5 bg-slate-800 absolute rounded-full left-1 top-1 peer-checked:left-11 peer-checked:bg-white transition-all duration-200"></span>
+                    </label>
+                </div>
+                <!-- search box -->
+                <div class="flex gap-[0.8rem] mb-[2rem] md:mb-[4rem] md:mr-[2.5rem] search dark:text-slate-900">
+                    <input type="text"
+                        class="border px-[1rem] w-full py-[0.7rem] rounded-md text-2xl shadow-sm md:w-full"
+                        placeholder="Enter city" />
+                    <button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="#111" class="size-10 svg">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>
+
+                    </button>
+                </div>
+                <!-- weather icon -->
+                <img src="../img/sun.png" class="w-[15rem] mb-[1.5rem] weather-icon"
+                    alt="weather icon representing current weather">
+                <!-- temperature -->
+                <p><span class="current-temperature text-[5rem] font-semibold">32</span><span
+                        class="text-[1.4rem] text-slate-500  dark:text-slate-300 ml-[0.5rem]">°C</span>
+                </p>
+                <p class="text-[1.8rem] mb-[2rem]"><span class="feels-like text-slate-600 dark:text-slate-300 ">Feels
+                        like</span><span class="app-temp font-semibold ml-[0.8rem]">30°</span>
+                </p>
+                <!-- date -->
+                <p class="date text-[2.4rem] mb-[2rem] md:mb-[8rem]"><span class="day font-semibold">Monday</span><span
+                        class="time ml-[0.8rem] text-slate-600 dark:text-slate-300">3:00
+                        PM</span></p>
+                <!-- weather summary -->
+                <p class="flex gap-[1rem] items-center  font-semibold"><ion-icon class="text-[3rem]"
+                        name="cloudy-outline"></ion-icon><span class="overall-weather text-[1.4rem]">Mostly
+                        Cloudy</span>
+                </p>
+                <p class="flex gap-[1rem] items-center font-semibold mb-[2rem] md:mb-[8rem]"><ion-icon
+                        class="text-[3rem]" name="rainy-outline"></ion-icon><span class="text-[1.4rem]"><span
+                            class="">Rain
+                            Probability:</span><span class="rain-probability ml-[0.8rem]">24%</span></span>
+                </p>
+                <!-- location -->
+                <p class="location font-bold text-[1.8rem]">Ahmedabad, Gujarat</p>
+
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="right-col bg-[#f3f3f3] dark:bg-slate-800 rounded-md">
+                <!-- daily weather prediction -->
+                <div
+                    class="daily-weather-container font-semibold grid grid-cols-3 items-center place-content-center justify-items-center gap-[1rem] md:flex md:justify-evenly mt-[2.5rem]">
+                    <!-- 1 -->
+                    <!-- <div
+                        class="text-[1.4rem] flex flex-col gap-[0.8rem]  items-center w-[7.5rem] bg-white py-[1rem] rounded-xl shadow-md">
+                        <p>MON</p>
+                        <img src="../img/sun.png" class="w-[3.5rem]" alt="">
+                        <p><span class="inline-block">25°</span><span
+                                class="text-slate-500 inline-block ml-[0.5rem]">16°</span></p>
+                    </div> -->
+                </div>
+
+                <div class="highlights-container p-[2rem]">
+                    <p class="font-semibold text-center md:text-left text-[2.4rem] mt-[3rem]">Today's Highlights</p>
+                    <div
+                        class="figures grid md:grid-cols-3 mt-[2rem] gap-x-[2rem] gap-y-[2rem] place-items-center text-slate-600 dark:text-slate-200">
+                        <!-- uv index -->
+                        <figure class="w-[100%] h-[100%] bg-white dark:bg-slate-950 rounded-lg shadow-lg p-[2rem]">
+                            <div class="flex flex-col p-[1rem] gap-[1rem]">
+                                <p class="text-[1.6rem]  ">UV Index</p>
+                                <p class="uv-index text-[5rem] text-slate-950 dark:text-white font-semibold">6.1</p>
+                                <p class="text-[1.6rem]"><span class="">Status:</span> <span
+                                        class="uv-status ml-[0.5rem] font-semibold">Moderate</span></p>
+                            </div>
+
+                        </figure>
+                        <!-- wind status -->
+                        <figure class="w-[100%] h-[100%] bg-white dark:bg-slate-950 rounded-lg shadow-lg p-[2rem]">
+                            <div class="flex flex-col p-[1rem] gap-[1rem]">
+                                <p class="text-[1.6rem]">Wind Speed</p>
+                                <p class=""><span
+                                        class="wind-speed text-[5rem] text-slate-950 dark:text-white font-semibold">7.85</span><span
+                                        class="text-[1.4rem] ml-[0.5rem]">km/h</span>
+                                </p>
+                                <p class="text-[1.6rem]"><span class="status">Status:</span> <span
+                                        class="wind-status ml-[0.5rem] font-semibold">Moderate</span></p>
+                            </div>
+                        </figure>
+                        <!-- sunrise and sunset -->
+                        <figure class="w-[100%] h-[100%] bg-white dark:bg-slate-950 rounded-lg shadow-lg p-[2rem]">
+                            <div class="flex flex-col p-[1rem] gap-[2.2rem]">
+                                <p class="text-[1.6rem]">Sunrise and Sunset</p>
+                                <div class="flex flex-col gap-[1.2rem]">
+                                    <div class="flex gap-[2rem]">
+                                        <div
+                                            class="w-[3.7rem] h-[3.7rem] rounded-full bg-gradient-to-b from-[#FFB52E] to-[#F2E34C] text-white">
+                                            <ion-icon name="arrow-up-outline" class="text-[3.5rem]"></ion-icon>
+                                        </div>
+                                        <p class="text-[1.2rem] font-semibold self-center sunrise">7:30 AM</p>
+                                    </div>
+                                    <div class="flex gap-[2rem]">
+                                        <div
+                                            class="w-[3.7rem] h-[3.7rem] rounded-full bg-gradient-to-t from-[#FFB52E] to-[#F2E34C] text-white">
+                                            <ion-icon name="arrow-down-outline" class="text-[3.5rem]"></ion-icon>
+                                        </div>
+                                        <p class="text-[1.2rem] font-semibold self-center sunset">7:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </figure>
+                        <!-- Humidity -->
+                        <figure class="w-[100%] h-[100%] bg-white dark:bg-slate-950 rounded-lg shadow-lg p-[2rem]">
+                            <div class="flex flex-col p-[1rem] gap-[1rem]">
+                                <p class="text-[1.6rem]">Humidity</p>
+                                <p class=""><span
+                                        class="humidity text-[5rem] text-slate-950 dark:text-white font-semibold">71.2</span><span
+                                        class="text-[1.4rem] ml-[0.5rem]">%</span>
+                                </p>
+                                <p class="text-[1.6rem]"><span class="status">Status:</span> <span
+                                        class="[text-[#00A300] humidity-status ml-[0.5rem] font-semibold">Good</span>
+                                </p>
+                            </div>
+                        </figure>
+                        <!-- Visibility -->
+                        <figure class="w-[100%] h-[100%] bg-white dark:bg-slate-950 rounded-lg shadow-lg p-[2rem]">
+                            <div class="flex flex-col p-[1rem] gap-[1rem]">
+                                <p class="text-[1.6rem] ">Visibility</p>
+                                <p><span
+                                        class="visibility text-[5rem] text-slate-950 dark:text-white font-semibold">24</span><span
+                                        class="text-[1.4rem]  ml-[0.5rem]">km</span>
+                                </p>
+                                <p class="text-[1.6rem]"><span class="status">Status:</span> <span
+                                        class="visibility-status ml-[0.5rem] font-semibold">Clear</span></p>
+                            </div>
+                        </figure>
+                        <!-- AQI -->
+                        <figure class="w-[100%] h-[100%] bg-white dark:bg-slate-950 rounded-lg shadow-lg p-[2rem]">
+                            <div class="flex flex-col p-[1rem] gap-[1rem]">
+                                <p class="text-[1.6rem]">AQI (US-Scale)</p>
+                                <span class="aqi text-[5rem] text-slate-950 dark:text-white font-semibold">60</span>
+                                <p class="text-[1.6rem]"><span class="status">Status:</span> <span
+                                        class="aqi-status ml-[0.5rem] font-semibold">Average</span></p>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
